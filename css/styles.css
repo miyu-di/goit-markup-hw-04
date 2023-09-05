@@ -299,6 +299,10 @@ button {
     align-items: center;
 }
 
+.social-link:hover, .social-link:focus {
+    background-color: #404BBF;
+}
+
 .media-icon {
     fill: #F4F4FD;
 }
