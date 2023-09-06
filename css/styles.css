@@ -90,7 +90,11 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.headline::after {
+.nav-studio-btn {
+    color: #404bbf;
+}
+
+.nav-studio-btn::after {
     content: '';
     height: 4px;
     position: absolute;
@@ -98,11 +102,7 @@ button {
     left: 0;
     bottom: -1px;
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.headline:hover::after {
-    background-color: #404BBF;
+    background-color: #404bbf;
 }
 
 .address-list {
@@ -212,13 +212,14 @@ button {
     padding-bottom: 120px;
 }
 
-.img-container {
+.icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 112px;
     border-radius: 4px;
     margin-bottom: 8px;
+    background-color: #f4f4fd;
 }
 
 .img-places { 
@@ -230,15 +231,12 @@ button {
 .list-img {
     display: flex;
     justify-content: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .list-img {
     display: flex;
     width: 264px;
     border: 1px solid #8E8F99;
-    background-color: #f4f4fd;
     border-radius: 4px;
 }
 
@@ -376,8 +374,7 @@ button {
 }
 
 .portfolio-list-item {
-    background-color: #FFF;
-    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item-wrapper {
@@ -404,11 +401,14 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .overlay {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+.portfolio-list-item-wrapper:hover {
+    transform: translateY(0%);
+}
+
+.portfolio-list-item:hover {
+    transition: box-shadow 0px 1px 6px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%);
 }
 
 .applications {
