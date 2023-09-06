@@ -42,9 +42,11 @@ button {
 /* HEADER */
 
 .page-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e7e9fc
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .head-page-line {
@@ -80,16 +82,21 @@ button {
     color: #2E2F42;
     padding: 24px 0;
     position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .headline::after {
     content: '';
     height: 4px;
-    background-color: #ffffff;
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -4px;
+    bottom: -1px;
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -123,7 +130,7 @@ button {
     letter-spacing: 0.32px;
     gap: 40px;
     display: flex;
-    
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 /* HEADER */
 
@@ -132,11 +139,15 @@ button {
 
 .hero {
     background-color: #2E2F42;
-    height: 600px;
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image/people-office.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 1440px;
+    background-position: center;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .the-beginning {
@@ -170,6 +181,8 @@ button {
     height: 56px;
     border: none;
     border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover, .order-button:focus {
@@ -198,22 +211,33 @@ button {
     padding-bottom: 120px;
 }
 
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
 .img-places { 
     display: flex;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .list-img {
     display: flex;
     justify-content: center;
     padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .list-img {
+    display: flex;
     width: 262px;
-    height: 112px;
     border: 1px solid #8E8F99;
-    background-color: #F4F4FD;
+    background-color: #f4f4fd;
     border-radius: 4px;
 }
 
@@ -280,6 +304,9 @@ button {
     background-color: #ffffff;
     text-align: center;
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .socialmedia-lists {
@@ -348,6 +375,7 @@ button {
 
 .portfolio-list-item {
     background-color: #FFF;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item-wrapper {
@@ -378,7 +406,10 @@ button {
 }
 
 .portfolio-list-item-link:hover .overlay, .portfolio-list-item-link:focus .overlay {
-    transform: translateY(0);
+    transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .applications {
@@ -433,26 +464,46 @@ button {
 }
 
 .footer-head {
-    color: #fff;
+    color: #ffffff;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5em;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 .footer-wrapper {
     display: flex;
-    gap: 120px;
+    align-items: baseline;
+    
+}
+
+.logo-footer-line {
+    margin-right: 120px;
 }
 
 .social-lists {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
     padding-top: 16px;
 }
 
+.social-footer-link {
+    background-color: #4D5AE5;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.social-footer-link:hover, .social-footer-link:focus {
+    background-color: #31d0aa;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* FOOTER */
